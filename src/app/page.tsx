@@ -1,8 +1,5 @@
-import Home from '@/app/ui/page'
-
+import Home from "@/app/ui/page";
 
 export default function Page() {
-    return (
-        <Home />
-    )
+  return <Home />;
 }

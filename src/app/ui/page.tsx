@@ -43,12 +43,12 @@ export default function Home() {
       const response = await api.TodosEditList(id, title);
       console.log(response);
       setRenew(true);
-    } catch(err) {
+    } catch (err) {
       console.log(err);
     }
   };
 
-  const headleEditInput = (e:any, value: number) => {
+  const headleEditInput = (e: any, value: number) => {
     setInputs((prevInputs) =>
       prevInputs.map((item, index) => {
         return index === value ? { ...item, title: e.target.value } : item;
