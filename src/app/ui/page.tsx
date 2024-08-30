@@ -52,7 +52,7 @@ export default function Home() {
     setInputs((prevInputs) =>
       prevInputs.map((item, index) => {
         return index === value ? { ...item, title: e.target.value } : item;
-      })
+      }),
     );
   };
 
@@ -70,21 +70,21 @@ export default function Home() {
     setInputs((prevInputs) =>
       prevInputs.map((item, index) => {
         return index === value ? { ...item, edit: !item.edit } : item;
-      })
+      }),
     );
   };
 
   return (
-    <div className="w-full h-screen bg-slate-300">
-      <div className="pt-[15%] py-5 flex items-center justify-center">
+    <div className="h-screen w-full bg-slate-300">
+      <div className="flex items-center justify-center py-5 pt-[15%]">
         <input
           onChange={headleInput}
           value={InputValue}
-          className="w-96 h-10 rounded-lg indent-2"
+          className="h-10 w-96 rounded-lg indent-2"
         />
 
         <button
-          className="w-20 h-10 bg-green-300 ml-5 rounded-lg"
+          className="ml-5 h-10 w-20 rounded-lg bg-green-300"
           onClick={headleButton}
         >
           送出
@@ -96,17 +96,17 @@ export default function Home() {
           {inputs.map((input, index) => (
             <div key={index} className="flex items-center">
               <input
-                className="w-96 h-10 rounded-lg my-2 indent-2"
+                className="my-2 h-10 w-96 rounded-lg indent-2"
                 key={index}
                 type="text"
                 value={input.title}
                 disabled={input.edit ? false : true}
                 onChange={(e) => headleEditInput(e, index)}
               />
-              <div className="w-20 h-10  ml-5 rounded-lg">
-                <div className="w-40 flex">
+              <div className="ml-5 h-10 w-20 rounded-lg">
+                <div className="flex w-40">
                   <button
-                    className="w-10 h-10 rounded-full bg-slate-400 flex items-center justify-center mx-2"
+                    className="mx-2 flex h-10 w-10 items-center justify-center rounded-full bg-slate-400"
                     onClick={() => headleDelete(input._id)}
                   >
                     <Image
@@ -118,7 +118,7 @@ export default function Home() {
                   </button>
 
                   <button
-                    className="w-10 h-10 rounded-full bg-slate-400 flex items-center justify-center mx-2"
+                    className="mx-2 flex h-10 w-10 items-center justify-center rounded-full bg-slate-400"
                     onClick={() => headleEdit(index)}
                   >
                     <Image
@@ -130,7 +130,7 @@ export default function Home() {
                   </button>
 
                   <button
-                    className="w-10 h-10 rounded-full bg-slate-400 flex items-center justify-center mx-2"
+                    className="mx-2 flex h-10 w-10 items-center justify-center rounded-full bg-slate-400"
                     onClick={() => headleCheck(input._id, input.title)}
                   >
                     <Image
