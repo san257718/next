@@ -52,7 +52,7 @@ export default function Home() {
     setInputs((prevInputs) =>
       prevInputs.map((item, index) => {
         return index === value ? { ...item, title: e.target.value } : item;
-      }),
+      })
     );
   };
 
@@ -70,7 +70,7 @@ export default function Home() {
     setInputs((prevInputs) =>
       prevInputs.map((item, index) => {
         return index === value ? { ...item, edit: !item.edit } : item;
-      }),
+      })
     );
   };
 
