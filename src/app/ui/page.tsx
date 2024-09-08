@@ -8,7 +8,7 @@ import api from "@/api/api";
 export default function Home() {
   const [InputValue, setInputValue] = useState<string>("");
   const [inputs, setInputs] = useState<InputRequest[]>([]);
-  const [renew, setRenew] = useState<boolean>(false);
+  const [renew, setRenew] = useState<boolean>(false);  
 
   useEffect(() => {
     const fetch = async () => {
