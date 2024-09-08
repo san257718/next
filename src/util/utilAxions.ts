@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const jsonApi = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_DATABASE_URL,
+  baseURL: 'https://express-todolist-len.vercel.app/',
   headers: {
     "Content-Type": "application/json",
   },
